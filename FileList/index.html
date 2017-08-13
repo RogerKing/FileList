@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>后台管理系统</title>
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center lead ad-title">网运中心流程管理系统</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <!--<div class="row">
+                <div class="col-md-12">
+                    <botton type="button" class="btn btn-default" data-toggle="modal" data-target="#newbuild">新建</botton>
+                </div>
+            </div>-->
+            <div class="row ad-table">
+                <div class="col-md-12">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>任务编号</th>
+                                <th>标题</th>
+                                <th>发起人</th>
+                                <th>日期</th>
+                                <th>状态</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>000000</td>
+                                <td>2017年7月份月报</td>
+                                <td>涛哥</td>
+                                <td>2017-08-13</td>
+                                <td>完成</td>
+                                <td>
+                                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#read">查看</button>
+                                    <button type="button" class="btn btn-danger" onclick="a()">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!--新建任务弹框 start-->
+            <div class="modal fade" id="newbuild" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">新建</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-3 control-label">标题</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" placeholder="请输入标题">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">发起人</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">admin</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">类别</label>
+                                                <div class="col-sm-9">
+                                                    <select class="form-control">
+                                                <option>通报</option>
+                                                <option>通知</option>
+                                                <option>其他</option>
+                                            </select>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">详细描述</label>
+                                                <div class="col-sm-9">
+                                                    <textarea class="form-control" rows="3"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputEmail3" class="col-sm-3 control-label">发起日期</label>
+                                                <div class="col-sm-9">
+                                                    <input type="date" class="form-control" placeholder="请填入日期">
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">确认新建</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--新建任务弹框 end-->
+            <!--查看订单 start-->
+            <div class="modal fade" id="read" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="textcontent">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">详情查看</h4>
+                        </div>
+                        <div class="bodytest">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">标题</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">2017年7月份月报</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">发起人</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">涛哥</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">类别</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">通报</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">详细描述</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">XXXXXXXXXXXXXXXXXX</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">日期</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">2017/08/13</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">状态</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">完成</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bodytest">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈人</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">子良兄</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈内容</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">XXXXXXXXXXXXXXXXXX</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈时间</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">2017/08/13</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bodytest">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈人</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">腾飞老师</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈内容</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">XXXXXXXXXXXXXXXXXX</p>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword3" class="col-sm-3 control-label">反馈时间</label>
+                                                <div class="col-sm-9">
+                                                    <p class="form-control-static">2017/08/13</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">X</button>
+                        </div>
+                    </div>
+                </div>
+                <!--查看订单 end-->
+                <script>
+                    function a() {
+                        alert("确认删除？？？？");
+                    }
+                </script>
+                <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+                <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+                <script src="index.js"></script>
+</body>
+
+</html>

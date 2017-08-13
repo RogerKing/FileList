@@ -1,0 +1,48 @@
+.header {
+    margin-top: 20px;
+}
+
+.header .ad-title {
+    font-size: 40px!important;
+}
+
+.content .ad-table {
+    margin-top: 10px;
+}
+
+.content td,
+.content th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.content td {
+    padding-top: 15px!important;
+}
+
+.content td:last-child {
+    padding-top: 8px!important;
+}
+
+.page a {
+    color: #333!important;
+}
+
+.bodytest {
+    position: relative;
+    padding: 15px;
+    border: 1px solid #ffffff;
+}
+
+.textcontent {
+    position: relative;
+    background-color: #312450;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 6px;
+    outline: 0;
+    -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
+    box-shadow: 0 3px 9px rgba(0, 0, 0, .5)
+}
